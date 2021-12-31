@@ -25,11 +25,15 @@ const displaySearchResult=(books)=>{
         console.log(book.cover_i)
         const div=document.createElement('div')
        div.classList.add('col-md-3');
-      const imageUrl = "https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg";
-      console.log(imageUrl);
+       const imgUrl = `https://covers.openlibrary.org/b/id/${book?.cover_i}-M.jpg`;
+      console.log(imgUrl);
        div.innerHTML=`
        <div class="shadow rounded p-3 m-2">
-    <img src=${imageUrl} alt="" />
+       ${
+        book?.cover_i
+          ? `<img src=${imgUrl} class="h-75 w-75 mx-auto" alt="...">`
+          : ""
+      }
        <h3>${book.title}</h3>
        <p>${book.first_publish_year}</p>
        
