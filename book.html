@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h3 class="text-center mb-5">Welcome to our book app</h3>
+       <!-- meal search area -->
+       <div class="input-group mb-3 w-50 mx-auto">
+        <input id="search-field" type="text" class="form-control" placeholder="Search the book you want"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="searchBook()" class="btn btn-outline-secondary" type="button"
+            id="button-search">search</button>
+    </div>
+
+    <!-- meal serach area end -->
+
+
+    <div class="container">
+        <!-- .row>.col-md-3*12>div.shadow.rounded.p-3.m-2>h3{title}+p{description} -->
+        <div id="search-result" class="row">
+            <div class="col-md-3">
+                <!-- <div class="shadow rounded p-3 m-2">
+                    <h3>title</h3>
+                    <p>description</p>
+                    
+                </div> -->
+            </div>
+             
+        </div>
+    </div>
+
+    
+
+
+    <script src="book.js"></script>
+</body>
+</html>
