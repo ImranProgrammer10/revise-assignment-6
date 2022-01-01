@@ -1,3 +1,6 @@
+const topResults = document.getElementById("top_results");
+const noResult=document.getElementById('no_result');
+
 const searchBook= async ()=>{
     const searchField=document.getElementById('search-field');
     const searchText=searchField.value;
@@ -5,6 +8,7 @@ const searchBook= async ()=>{
     searchField.value='';
     if(searchText==''){
       // please write something to display
+    
     }
     else{
        const url=`https://openlibrary.org/search.json?q=${searchText}`
@@ -20,7 +24,16 @@ const searchBook= async ()=>{
 }
 
 const displaySearchResult=(books)=>{
+   
+    if (books?.length == 0) {
+        noResult.innerText=`No result Found`;
+
+  }
+
+  topResults.innerText = `Showing top ${books?.length} results`; 
+
     const searchResult=document.getElementById('search-result');
+    searchResult.textContent="";
     books.forEach(book=>{
         console.log(book.cover_i)
         const div=document.createElement('div')
